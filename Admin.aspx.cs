@@ -25,11 +25,11 @@ namespace FitnessApp
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();
-                  //Response.Write("Connected");
+                  Response.Write("Connected");
                 }
             }
            catch( Exception ex ) {
-            
+                Response.Write(ex.ToString());  
             }
          }
     
