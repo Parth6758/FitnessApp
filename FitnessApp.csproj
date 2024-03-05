@@ -73,6 +73,8 @@
       <DependentUpon>fitness.mdf</DependentUpon>
     </Content>
     <Content Include="ClientInfo.aspx" />
+    <Content Include="ClientInfoCss.css" />
+    <Content Include="ClientInfoJs.js" />
     <Content Include="CourseDetails.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="Global.asax" />

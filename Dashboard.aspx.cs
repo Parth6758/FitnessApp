@@ -13,5 +13,19 @@ namespace FitnessApp
         {
 
         }
+        protected void course_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/CourseDetails.aspx");
+        }
+
+        protected void client_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ClientInfo.aspx");
+        }
+
+        protected void exercise_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ManageExercise.aspx");
+        }
     }
 }

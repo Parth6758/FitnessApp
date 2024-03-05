@@ -1,0 +1,38 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,400;1,600;1,400&display=swap');
+
+:root {
+    --primary-color: #f50045;
+    --secondary-color: #000;
+    --bar-height: 0.5rem;
+}
+
+body {
+    font-family:monospace;
+}
+
+.item_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.item_bar {
+    position: relative;
+    margin-top:10px;
+    height: var(--bar-height);
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+}
+
+.item_bar .progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%; /* Set the height to 100% to match the parent height */
+    margin: 0;
+    background-color: #14A44D; /* Change color for better visibility */
+    border-radius: 4px;
+    transition: width 100ms ease
+}
