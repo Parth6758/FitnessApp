@@ -27,13 +27,10 @@ namespace FitnessApp
 
         protected void DisplayClients()
         {
-            // Assuming you have a method to fetch client data from the database
             DataTable dtClients = GetClients();
 
-            // Clear the content of the Literal control before adding new rows
             litClientRows.Text = "";
 
-            // Loop through the client data and create table rows dynamically
             int rowNumber = 1;
             foreach (DataRow row in dtClients.Rows)
             {
@@ -46,7 +43,6 @@ namespace FitnessApp
                 string Course = row["Course"].ToString();
                 string Progress = row["Progress"].ToString();
 
-                // Construct the table row HTML
                 string rowHtml = $@"
                     <tr>
                         <th scope='row'>{rowNumber}</th>
@@ -62,19 +58,32 @@ namespace FitnessApp
                                 <div class='progress' style='width: {Progress}%;'></div>
                             </div>
                         </td>
+                        <td style='margin-top=20px'>
+                            <svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='currentColor' class='bi bi-three-dots-vertical' viewBox='0 0 16 16'>
+                            <path d='M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0'/>
+                            </svg>
+                        </td>
                     <tr>";
 
-                // Append the row HTML to the Literal control
                 litClientRows.Text += rowHtml;
 
                 rowNumber++;
             }
         }
 
-        // Method to fetch client data from the database
+        protected void btnAddClient_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AddClient.aspx");
+        }
+        
+        protected void btnGoHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Dashboard.aspx");
+        }
+
+
         private DataTable GetClients()
         {
-            // Example code to fetch client data from the database
             string connectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

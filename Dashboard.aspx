@@ -6,20 +6,27 @@
 <head runat="server">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <style>
+        body {
+            font-family: monospace;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand mx-auto" href="#">FitTrackr Admin</a>
-        </div>
-    </nav>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand mx-auto" href="#">FitTrackr Admin</a>
+            </div>
+            <div>
+                <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" CssClass="btn btn-danger" />
+            </div>
+        </nav>
 
-    <div style="margin:40px 80px">
-        <form id="form1" runat="server">
             <div>
                 <!-- Courses -->
                 <div class="card" style="margin-bottom: 15px">
-                    
+
                     <div class="card-body">
                         <h1>Courses</h1>
                         <p>Everything we see in the world around us has a shape. We can find different basic shapes such as the square, rectangle, and oval or the rectangular prism, cylinder, and sphere in the objects we see around us. These geometric shapes appear in objects...</p>
@@ -29,7 +36,7 @@
 
                 <!-- Clients -->
                 <div class="card" style="margin-bottom: 15px">
-                    
+
                     <div class="card-body">
                         <h1>Clients</h1>
                         <p>Everything we see in the world around us has a shape. We can find different basic shapes such as the square, rectangle, and oval or the rectangular prism, cylinder, and sphere in the objects we see around us. These geometric shapes appear in objects...</p>
@@ -39,7 +46,7 @@
 
                 <!-- Exercise -->
                 <div class="card" style="margin-bottom: 15px">
-                    
+
                     <div class="card-body">
                         <h1>Exercises</h1>
                         <p>Everything we see in the world around us has a shape. We can find different basic shapes such as the square, rectangle, and oval or the rectangular prism, cylinder, and sphere in the objects we see around us. These geometric shapes appear in objects...</p>
@@ -48,7 +55,7 @@
                     </div>
                 </div>
             </div>
-        </form>
-    </div>
+    </form>
+    
 </body>
 </html>

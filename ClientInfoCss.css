@@ -15,9 +15,13 @@ body {
     align-items: center;
 }
 
+.three_dots {
+    padding-top: 10px;
+}
+
 .item_bar {
     position: relative;
-    margin-top:10px;
+    margin-top: 8px;
     height: var(--bar-height);
     width: 100%;
     background-color: var(--secondary-color);
@@ -30,9 +34,9 @@ body {
     top: 0;
     bottom: 0;
     width: 0;
-    height: 100%; /* Set the height to 100% to match the parent height */
+    height: 100%;
     margin: 0;
-    background-color: #14A44D; /* Change color for better visibility */
+    background-color: #14A44D; 
     border-radius: 4px;
     transition: width 100ms ease
 }
